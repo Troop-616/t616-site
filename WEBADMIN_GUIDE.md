@@ -127,7 +127,7 @@ If you have never written code or used Git before, do not worry! This website is
 ### 1. Create a GitHub Account
 1. Go to [github.com/join](https://github.com/join).
 2. **Age Requirement**: You must be at least 13 years old to create a GitHub account. If you are younger, please set it up with your parent.
-3. **Pick a Clean Username**: Choose a clean, semi-professional username (like `j-smith-t616` or `jack-smith616`) that you can use on school projects or college applications later.
+3. **Pick a Clean Username**: Choose a clean, semi-professional username (like `scout-coder-616` or `t616-webmaster`) that you can use on school projects or college applications later.
 
 ### 2. The Easiest Way to Use Git (GitHub Desktop)
 Command-line Git is cool, but it can be confusing. The easiest, most visual way to manage your changes is **GitHub Desktop**:
