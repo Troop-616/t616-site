@@ -47,8 +47,21 @@ t616-site/ (Git Repository Root)
 To test and compile changes on your computer:
 
 ### Prerequisites
-1. **Git**: Install Git on your computer.
-2. **Python 3**: Make sure Python 3 is installed.
+
+#### 1. Install Git
+* **Mac**: Git is usually installed by default. To check, open the Terminal app and type `git --version`. If it prompts you to install command-line developer tools, click **Install**.
+* **Windows**: Download and install [Git for Windows](https://git-scm.com/download/win).
+
+#### 2. Install Python 3
+* **Windows (Easiest Method)**:
+  1. Open the **Microsoft Store** app on your computer.
+  2. Search for **Python 3.12** (or the latest version) and click **Get / Install**.
+  * *Note: Installing from the Microsoft Store is highly recommended because it automatically configures your system path, avoiding command-line setup errors!*
+* **Mac (Easiest Method)**:
+  1. Go to [python.org/downloads](https://www.python.org/downloads/).
+  2. Click the button to download the latest installer for macOS.
+  3. Run the installer package and follow the standard setup wizard.
+
 
 ### Step-by-Step Edit & Preview Flow
 1. **Open Terminal**: Navigate to your project folder:
