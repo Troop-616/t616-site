@@ -128,7 +128,6 @@ def scan_for_pii(fail_on_broken=False):
         "t616.org",
         "troop616.org",
         "troopwebhost.org",
-        "shutterfly.com",
         "vimeo.com",
         "github.com",
         "scouting.org"

@@ -26,7 +26,7 @@ t616-site/ (Git Repository Root)
 │   ├── about-us.body.html  # Joining information, troop history, leadership
 │   ├── resources.body.html # Patrol planners, worksheets, checklists
 │   ├── links.body.html     # External scout links (BSA, Council, Scoutbook)
-│   ├── photos.body.html    # Links and archives of photos (Shutterfly)
+│   ├── photos.body.html    # Links and archives of troop photos
 │   └── t616-eagle-scout-stories.body.html # History of Troop 616 Eagles
 │
 ├── assets/                 # Original media and downloads
