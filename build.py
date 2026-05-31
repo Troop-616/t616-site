@@ -70,14 +70,24 @@ _PIN_SVG = (
 
 
 def load_events():
-    """Load upcoming events from content/events.yaml."""
+    """Load upcoming events from content/events.yaml.
+
+    Supports two YAML formats:
+      - Bare list (original):   - title: ...
+      - Pages CMS format:       events:\n  - title: ...
+    """
     events_file = CONTENT_DIR / "events.yaml"
     if not events_file.exists():
         print("Warning: content/events.yaml not found. No events will be rendered.")
         return []
     with open(events_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
-    return data if isinstance(data, list) else []
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        # Pages CMS wraps the list under the field name 'events'
+        return data.get('events', [])
+    return []
 
 
 def render_event_cards(events):
