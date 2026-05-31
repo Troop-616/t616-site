@@ -44,32 +44,28 @@ t616-static/ (Git Root)
 
 ## 🛠️ How to Edit the Website (For Scouts)
 
-This site uses a **template compiler** so that you don't have to copy-paste the header and footer navigation menus onto every single page. 
+This site uses a template compiler so that you don't have to copy-paste the header and footer navigation menus onto every single page.
 
 ### Step 1: Make your changes
-* **To edit page content** (like adding a calendar event or updating text): Open the corresponding file in `pages/` (e.g. `pages/index.body.html`).
+* **To edit page content** (like adding a calendar event or updating text): Open the corresponding file in `pages/` (e.g., `pages/index.body.html`).
 * **To change the logo or the navigation menu**: Edit `templates/header.html`.
 * **To change the meeting times or footer links**: Edit `templates/footer.html`.
 * **To update styles (colors, fonts, layout)**: Edit `style.css` in the root.
 * **To add a new document to download**: Drop the file in the root `assets/downloads/` and link to it in `pages/resources.body.html` using `<a href="assets/downloads/filename.pdf">Download</a>`.
 
-### Step 2: Compile the pages
-After saving your changes, open your terminal/command prompt, navigate to this folder, and run:
+### Step 2: Compile the pages (locally for testing)
+After saving your changes, open your terminal, navigate to this folder, and run:
 ```bash
 python3 build.py
 ```
-This will:
-1. Merge your body content with the header/footer templates and save the compiled HTML pages inside the `/docs` folder.
-2. Automatically copy your `style.css` and the entire `assets/` folder (images & downloads) into the `/docs` folder.
-
-*Note: You never need to edit files in `docs/` directly.*
+This will merge your body content with templates and save them inside the `docs/` folder, and check for any broken local links. *Note: You never need to edit files in `docs/` directly.*
 
 ### Step 3: Preview locally
 You can preview your changes exactly as they will look on the internet by starting a local web server:
 ```bash
 python3 -m http.server 8000 --directory docs
 ```
-Then, open your web browser and go to `http://localhost:8000`. When you're done, press `Ctrl + C` in the terminal to stop the server.
+Then, open your web browser and go to `http://localhost:8000`. Press `Ctrl + C` in the terminal to stop the server when done.
 
 ---
 
@@ -88,17 +84,15 @@ If your TroopWebHost subdomain or URL changes in the future, you only need to up
 
 ---
 
-## 🚀 How to Host on GitHub Pages (Free)
+## 🚀 Hosting & Automated Deployment
 
-GitHub Pages is 100% free and is the perfect platform for this website.
+This website is hosted on **GitHub Pages** and is automatically built and deployed via **GitHub Actions** on every push to the `main` branch.
 
-1. **Create a GitHub Repository**: Create a new public or private repository on GitHub (e.g., `t616-website`).
-2. **Push the Code**: Initialize git in the `t616-static` folder, commit your files, and push them to GitHub.
-3. **Enable GitHub Pages**:
-   * Go to your repository settings on GitHub.
-   * Click **Pages** in the left sidebar.
-   * Under "Build and deployment", select **Deploy from a branch** and choose `main` (or `master`) and change the folder option to **`/docs`** (instead of `/(root)`).
-   * Click **Save**.
-4. **Point your Custom Domain**:
-   * Under the GitHub Pages settings, add your custom domain: `t616.org`.
-   * Configure your domain registrar (GoDaddy, Google Domains, etc.) to point `t616.org` to GitHub's DNS IP addresses.
+### Setting Up GitHub Pages
+1. Go to your repository settings on GitHub.
+2. Click **Pages** in the left sidebar.
+3. Under **Build and deployment** -> **Source**, select **GitHub Actions** (instead of *Deploy from a branch*).
+4. That's it! GitHub Actions will run `build.py` automatically, verify all links are correct, and push the live version to the internet.
+
+For a detailed walkthrough on setting up local environments, using AI assistants, and completing the 6-month Webadmin role transition, see the [Scout Webadmin Handoff & Reference Guide](WEBADMIN_GUIDE.md).
+
