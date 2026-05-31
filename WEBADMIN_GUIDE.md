@@ -117,3 +117,41 @@ At the end of your term, you must complete this handoff checklist with the incom
 - [ ] **Update Email Forwarder/Alias**: Log into the domain control panel (or contact the adult Webmaster) to update the destination of the `webadmin@t616.org` forwarder to point to the incoming Webadmin's personal email (and parents' emails).
 - [ ] **TroopWebHost Credentials**: Confirm they have the necessary Scout/Adult Webadmin access level on **TroopWebHost** to update the calendar integration or custom pages if needed.
 - [ ] **Submit Handoff Form**: Notify the Scoutmaster or Committee Webmaster that the handoff is complete.
+
+---
+
+## ⚜️ 6. Scout Quickstart: New to Code & Git?
+
+If you have never written code or used Git before, do not worry! This website is a great place to start. Here is the easiest way to get set up:
+
+### 1. Create a GitHub Account
+1. Go to [github.com/join](https://github.com/join).
+2. **Age Requirement**: You must be at least 13 years old to create a GitHub account. If you are younger, please set it up with your parent.
+3. **Pick a Clean Username**: Choose a clean, semi-professional username (like `j-smith-t616` or `jack-smith616`) that you can use on school projects or college applications later.
+
+### 2. The Easiest Way to Use Git (GitHub Desktop)
+Command-line Git is cool, but it can be confusing. The easiest, most visual way to manage your changes is **GitHub Desktop**:
+1. Download and install **[GitHub Desktop](https://desktop.github.com/)** (Free for Mac/Windows).
+2. Open the app and click **Sign in to GitHub.com**. It will open your web browser, ask you to log in, and authenticate automatically. No SSH keys or terminal configuration needed!
+3. Click **Clone a repository** and choose `t616-website` (which you have write access to).
+4. Now you can make edits, see exactly what lines of code changed in the app, type a summary of what you did, and click **Commit** and **Push** visually!
+
+*If you prefer using the command line: Install the [GitHub CLI (`gh`)](https://cli.github.com/) and run `gh auth login`. It will log you in via the browser securely without needing SSH keys.*
+
+### 3. Easiest and Free AI Coding Setup
+To use AI coding tools to help you update the website:
+* **Option A: VS Code + Browser AI (Easiest & 100% Free)**:
+  1. Download **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** to edit files.
+  2. Use a free AI chat like **Gemini** (gemini.google.com) or **Claude** (claude.ai) in your browser.
+  3. Copy and paste the prompt template from [Section 3](#-3-guidelines-for-using-ai-assistants) of this guide into the browser chat, then paste your code and ask it to write updates.
+* **Option B: GitHub Student Developer Pack (Free Copilot)**:
+  * If you have a school-provided email address, you can apply for the **[GitHub Student Developer Pack](https://education.github.com/pack)**.
+  * Once approved, you get **GitHub Copilot** (the industry-standard AI coding assistant) for **free**. You can install the GitHub Copilot extension directly inside VS Code!
+* **Option C: Cursor IDE (Free Tier)**:
+  * Download **[Cursor](https://www.cursor.com/)** (an AI-focused code editor). It has built-in AI chat and reads your `.cursorrules` file automatically. The free tier gives you 50 fast AI responses per month.
+
+### 4. Golden Rules for New Webadmins
+* **Don't panic!** Git is like a time machine. If you make a mistake, delete a file, or write buggy code, we can easily press "revert" and restore the site to how it looked yesterday. You cannot permanently break the website.
+* **Test locally**: Always run `python3 build.py` locally and preview it on `http://localhost:8000` in your browser before committing.
+* **Use Branches**: Instead of editing the `main` branch directly, create a branch (e.g. `add-campout-june`), make your edits, and open a **Pull Request (PR)** on GitHub. This lets other scouts or adults see your changes before they go live!
+
