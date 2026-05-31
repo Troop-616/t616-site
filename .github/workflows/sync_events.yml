@@ -1,0 +1,61 @@
+name: Sync Events from TroopWebHost
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC (11:00 PM PST)
+    - cron: "0 6 * * *"
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write # Needed to commit updated YAML files
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Dependencies
+        run: |
+          pip install pyyaml beautifulsoup4 playwright
+          python3 -m playwright install chromium --with-deps
+
+      - name: Sync Events from TroopWebHost
+        run: python3 scripts/sync_twh_events.py
+
+      - name: Check for Changes
+        id: diff
+        run: |
+          git diff --quiet content/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit Updated Event Data
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/events.yaml content/highlights.yaml
+          git commit -m "chore: sync events from TroopWebHost [skip ci]"
+          git push
+
+      - name: Trigger Site Deploy
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'main'
+            });
+            console.log('Deploy workflow triggered.');
+
+      - name: No Changes
+        if: steps.diff.outputs.changed != 'true'
+        run: echo "No event changes detected. Skipping commit and deploy."

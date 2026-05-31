@@ -74,7 +74,7 @@ def load_events():
 
     Supports two YAML formats:
       - Bare list (original):   - title: ...
-      - Pages CMS format:       events:\n  - title: ...
+      - Dict format:            events:\n  - title: ...
     """
     events_file = CONTENT_DIR / "events.yaml"
     if not events_file.exists():
@@ -85,9 +85,61 @@ def load_events():
     if isinstance(data, list):
         return data
     if isinstance(data, dict):
-        # Pages CMS wraps the list under the field name 'events'
+        # Dict format wraps the list under the field name 'events'
         return data.get('events', [])
     return []
+def load_highlights():
+    """Load past event highlights from content/highlights.yaml."""
+    highlights_file = CONTENT_DIR / "highlights.yaml"
+    if not highlights_file.exists():
+        print("Warning: content/highlights.yaml not found. No highlights will be rendered.")
+        return []
+    with open(highlights_file, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        return data.get('highlights', [])
+    return []
+
+
+def render_highlight_cards(highlights):
+    """Render a list of highlight dicts into the cards-grid HTML block."""
+    if not highlights:
+        return ""
+
+    cards = []
+    for hl in highlights:
+        title = html.escape(str(hl.get("title", "")))
+        badge = html.escape(str(hl.get("badge", "")))
+        date = html.escape(str(hl.get("date", "")))
+        image = html.escape(str(hl.get("image", "")))
+        image_full = html.escape(str(hl.get("image_full", "")))
+        source_url = html.escape(str(hl.get("source_url", "")))
+
+        # Link image to full-size photo and use the high-res image as the src
+        img_src = image_full if image_full else image
+        img_html = f'<a href="{image_full}" target="_blank" class="card-img-link"><img src="{img_src}" alt="{title}" class="card-img"></a>' if image_full else f'<img src="{image}" alt="{title}" class="card-img">'
+        
+        # Link title to TroopWebHost event detail page
+        title_html = f'<a href="{source_url}" target="_blank" class="card-title-link">{title}</a>' if source_url else title
+
+        card = (
+            '        <div class="card">\n'
+            '          <div class="card-img-container">\n'
+            f'            {img_html}\n'
+            f'            <span class="card-badge">{badge}</span>\n'
+            '          </div>\n'
+            '          <div class="card-content" style="padding-bottom: 20px;">\n'
+            f'            <div class="card-date">{date}</div>\n'
+            f'            <h3 class="card-title" style="margin-bottom: 0;">{title_html}</h3>\n'
+            '          </div>\n'
+            '        </div>'
+        )
+        cards.append(card)
+
+    inner = "\n\n".join(cards)
+    return f'      <div class="cards-grid">\n{inner}\n      </div>'
 
 
 def render_event_cards(events):
@@ -104,14 +156,28 @@ def render_event_cards(events):
         location = html.escape(str(event.get("location", "")))
         image = html.escape(str(event.get("image", "")))
 
+        if image:
+            img_container = (
+                '          <div class="card-img-container">\n'
+                f'            <img src="{image}" alt="{title}" class="card-img">\n'
+                f'            <span class="card-badge">{badge}</span>\n'
+                '          </div>\n'
+            )
+            card_header = f'            <div class="card-date">{date}</div>\n'
+        else:
+            img_container = ''
+            card_header = (
+                '            <div class="card-header">\n'
+                f'              <div class="card-date">{date}</div>\n'
+                f'              <span class="card-badge-inline">{badge}</span>\n'
+                '            </div>\n'
+            )
+
         card = (
             '        <div class="card">\n'
-            '          <div class="card-img-container">\n'
-            f'            <img src="{image}" alt="{title}" class="card-img">\n'
-            f'            <span class="card-badge">{badge}</span>\n'
-            '          </div>\n'
+            f'{img_container}'
             '          <div class="card-content">\n'
-            f'            <div class="card-date">{date}</div>\n'
+            f'{card_header}'
             f'            <h3 class="card-title">{title}</h3>\n'
             f'            <p class="card-desc">{description}</p>\n'
             '            <div class="card-meta">\n'
@@ -319,6 +385,9 @@ def build_site(fail_on_broken=False):
     events = load_events()
     events_html = render_event_cards(events)
 
+    highlights = load_highlights()
+    highlights_html = render_highlight_cards(highlights)
+
     for page in pages:
         body_path = PAGES_DIR / page["body_file"]
 
@@ -334,6 +403,8 @@ def build_site(fail_on_broken=False):
         # Inject dynamic content at placeholders
         body_content = body_content.replace(
             "<!-- EVENTS_PLACEHOLDER -->", events_html
+        ).replace(
+            "<!-- HIGHLIGHTS_PLACEHOLDER -->", highlights_html
         )
 
         # Build header with active state

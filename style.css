@@ -436,6 +436,29 @@ header {
   text-transform: uppercase;
 }
 
+.card-badge-inline {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-header .card-date {
+  margin-bottom: 0;
+}
+
 .card-content {
   padding: 24px;
   flex-grow: 1;
@@ -454,6 +477,24 @@ header {
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 12px;
+}
+
+.card-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.card-title-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card-img-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .card-desc {

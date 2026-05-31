@@ -17,6 +17,13 @@ t616-static/ (Git Root)
 ├── .gitignore              # Tells git to ignore cache files
 ├── .cursorrules            # Instructions for AI assistants (like Cursor/Copilot)
 │
+├── content/                # Dynamic Data Files (Auto-updated from TroopWebHost)
+│   ├── events.yaml         # Sync'ed upcoming events
+│   └── highlights.yaml     # Sync'ed past adventure photos
+│
+├── scripts/                # Utility & Sync Scripts
+│   └── sync_twh_events.py  # Playwright sync script to scrape TroopWebHost
+│
 ├── templates/              # Shared Layout Templates
 │   ├── header.html         # Top navigation and logo (edit here to change menus)
 │   └── footer.html         # Bottom directory, meeting schedule, and copyright
@@ -26,7 +33,6 @@ t616-static/ (Git Root)
 │   ├── about-us.body.html
 │   ├── resources.body.html
 │   ├── links.body.html
-│   ├── photos.body.html
 │   └── t616-eagle-scout-stories.body.html
 │
 ├── assets/                 # Source Media Assets (images & documents)
@@ -47,7 +53,7 @@ t616-static/ (Git Root)
 This site uses a template compiler so that you don't have to copy-paste the header and footer navigation menus onto every single page.
 
 ### Step 1: Make your changes
-* **To edit page content** (like adding a calendar event or updating text): Open the corresponding file in `pages/` (e.g., `pages/index.body.html`).
+* **To edit page content** (like adding a resource or updating text): Open the corresponding file in `pages/` (e.g., `pages/resources.body.html`).
 * **To change the logo or the navigation menu**: Edit `templates/header.html`.
 * **To change the meeting times or footer links**: Edit `templates/footer.html`.
 * **To update styles (colors, fonts, layout)**: Edit `style.css` in the root.
@@ -66,6 +72,35 @@ You can preview your changes exactly as they will look on the internet by starti
 python3 -m http.server 8000 --directory docs
 ```
 Then, open your web browser and go to `http://localhost:8000`. Press `Ctrl + C` in the terminal to stop the server when done.
+
+---
+
+## 🔄 Dynamic Event Syncing
+
+The homepage displays two sections dynamically loaded from the troop's official **TroopWebHost** portal:
+1. **Upcoming Meetings & Outings** (derived from upcoming calendar events)
+2. **Highlights from Past Adventures** (derived from recent past events containing photo gallery uploads)
+
+### How it works:
+* A background sync script (**`scripts/sync_twh_events.py`**) launches a headless browser (via Playwright) to navigate the troop's public page, scrape events and high-resolution photo gallery details, and write them to the data files in `content/`.
+* A **GitHub Actions Workflow** (`sync_events.yml`) runs this scraper automatically **every day at 6:00 AM UTC**.
+* If any new events or photos are detected, it commits them directly to the repository and triggers a rebuild/deploy workflow automatically.
+
+### Running a Manual Sync:
+If you need to force an immediate sync of events/photos, you can run the sync script manually from your local command line:
+1. Ensure Playwright and BeautifulSoup4 are installed:
+   ```bash
+   pip3 install playwright beautifulsoup4 pyyaml
+   python3 -m playwright install chromium
+   ```
+2. Run the sync:
+   ```bash
+   python3 scripts/sync_twh_events.py
+   ```
+3. Rebuild the site:
+   ```bash
+   python3 build.py
+   ```
 
 ---
 
