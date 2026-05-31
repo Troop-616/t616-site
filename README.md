@@ -1,4 +1,4 @@
-# Boy Scout Troop 616 — Static Website
+# Boy Scout Troop 616 Website
 
 Welcome to the official repository for the Troop 616 public website! This site is designed to be lightweight, responsive, and completely self-contained. It serves as a beautiful front page to welcome prospective families, while linking directly to **TroopWebHost (TWH)** for member management and the calendar, and **Shutterfly** for photo archives.
 
