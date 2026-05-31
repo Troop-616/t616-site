@@ -90,8 +90,8 @@ If you use AI coding assistants (like Google Gemini, ChatGPT, Cursor, Copilot, o
 ### Copy-Paste System Prompt for AIs
 When starting a chat session with an AI, paste the following message first:
 
-> "I am working on the static website for Boy Scout Troop 616. The site uses a custom Python compiler. 
-> 
+> "I am working on the static website for Boy Scout Troop 616. The site uses a custom Python compiler.
+>
 > CRITICAL RULES:
 > 1. Do NOT make or suggest edits directly inside the `docs/` directory.
 > 2. All body content edits must be made inside `pages/` (e.g. `pages/index.body.html`).
@@ -166,5 +166,4 @@ To use AI coding tools to help you update the website:
 ### 4. Golden Rules for New Webadmins
 * **Don't panic!** Git is like a time machine. If you make a mistake, delete a file, or write buggy code, we can easily press "revert" and restore the site to how it looked yesterday. You cannot permanently break the website.
 * **Test locally**: Always run `python3 build.py` locally and preview it on `http://localhost:8000` in your browser before committing.
-* **Use Branches**: Instead of editing the `main` branch directly, create a branch (e.g. `add-campout-june`), make your edits, and open a **Pull Request (PR)** on GitHub. This lets other scouts or adults see your changes before they go live!
-
+* **Pushing directly to `main` is allowed**: You can commit and push your changes directly to the `main` branch. Our automated setup acts as a safety net: if your build has errors (like broken links), the deployment will fail and keep the live site running on the last working version until you fix the code and push again.

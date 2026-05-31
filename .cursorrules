@@ -7,7 +7,7 @@ This project is a static site structured with a custom Python compiler. Follow t
 ## ⚠️ CRITICAL RULES (MUST READ FIRST)
 
 1. **DO NOT edit HTML files inside the `docs/` folder directly** (`docs/index.html`, etc.).
-   * The files in the `docs/` folder are **auto-generated** by `build.py`. 
+   * The files in the `docs/` folder are **auto-generated** by `build.py`.
    * Any direct edits made to them will be **permanently overwritten** the next time `build.py` is run.
 2. **Do NOT edit style.css or assets/ inside `docs/` directly**:
    * The styling is defined in the root `style.css` file. It is copied to `docs/style.css` automatically during build.
@@ -17,6 +17,24 @@ This project is a static site structured with a custom Python compiler. Follow t
    * The shared header is inside `templates/header.html`.
    * The shared footer is inside `templates/footer.html`.
 4. **Always prompt the user to run `python3 build.py`** after making changes so their final HTML output compiles.
+
+---
+
+## 📐 Formatting Standards (enforced by pre-commit)
+
+These rules are automatically checked by the pre-commit hooks configured in `.pre-commit-config.yaml`.
+**All AI-generated code must comply with these rules to avoid hook failures on commit.**
+
+1. **No trailing whitespace** — Do not leave spaces or tabs at the end of any line in any file type (HTML, CSS, Python, Markdown, YAML, etc.).
+2. **Single newline at end of file** — Every file must end with exactly one newline character (`\n`). Do not add a blank line after the final line of content.
+3. **LF line endings only** — Use Unix-style line endings (`\n`). Do not use Windows-style CRLF (`\r\n`).
+4. **No merge conflict markers** — Never commit files containing `<<<<<<<`, `=======`, or `>>>>>>>`.
+5. **No files over 5MB** — Do not add binary assets, images, or PDFs that exceed 5MB. Compress large assets before adding them.
+
+### Quick checklist for AI-generated output
+- [ ] Every line ends immediately after the last non-whitespace character (no trailing spaces).
+- [ ] The file ends with a single `\n` — one newline, no trailing blank line.
+- [ ] All line endings are `\n`, not `\r\n`.
 
 ---
 

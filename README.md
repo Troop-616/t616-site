@@ -95,4 +95,3 @@ This website is hosted on **GitHub Pages** and is automatically built and deploy
 4. That's it! GitHub Actions will run `build.py` automatically, verify all links are correct, and push the live version to the internet.
 
 For a detailed walkthrough on setting up local environments, using AI assistants, and completing the 6-month Webadmin role transition, see the [Scout Webadmin Handoff & Reference Guide](WEBADMIN_GUIDE.md).
-

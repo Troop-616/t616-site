@@ -7,7 +7,7 @@ This project is a static site structured with a custom Python compiler. Follow t
 ## ⚠️ CRITICAL RULES (MUST READ FIRST)
 
 1. **DO NOT edit HTML files inside the `docs/` folder directly** (`docs/index.html`, etc.).
-   * The files in the `docs/` folder are **auto-generated** by `build.py`. 
+   * The files in the `docs/` folder are **auto-generated** by `build.py`.
    * Any direct edits made to them will be **permanently overwritten** the next time `build.py` is run.
 2. **Do NOT edit style.css or assets/ inside `docs/` directly**:
    * The styling is defined in the root `style.css` file. It is copied to `docs/style.css` automatically during build.

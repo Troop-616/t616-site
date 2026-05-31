@@ -1,0 +1,66 @@
+# .pre-commit-config.yaml
+#
+# Personal pre-commit hooks for the Troop 616 website maintainer.
+# These hooks are OPTIONAL and only run if you have installed pre-commit locally:
+#
+#   pip install pre-commit detect-secrets
+#   pre-commit install
+#
+# Scouts who do not run `pre-commit install` will not be affected by these hooks.
+# The hooks enforce code quality and safety standards before every commit.
+#
+# To run manually against all files:
+#   pre-commit run --all-files
+#
+# To update hook versions:
+#   pre-commit autoupdate
+
+repos:
+
+  # ── Basic syntax & file hygiene ────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+        name: Validate YAML files
+      - id: check-json
+        name: Validate JSON files
+      - id: check-xml
+        name: Validate XML files (and HTML parsed as XML)
+        files: \.(xml)$
+      - id: end-of-file-fixer
+        name: Ensure files end with a newline
+      - id: trailing-whitespace
+        name: Remove trailing whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: check-merge-conflict
+        name: Detect unresolved merge conflict markers
+      - id: check-added-large-files
+        name: Block large file commits
+        args: [--maxkb=5000]     # 5MB — mirrors build.py limits roughly
+      - id: mixed-line-ending
+        name: Enforce consistent line endings (LF)
+        args: [--fix=lf]
+
+  # ── Secret detection ───────────────────────────────────────────────────────
+  # Scans staged files for accidentally committed secrets (API keys, passwords, etc.).
+  # No baseline file required — runs clean on every commit.
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.5.0
+    hooks:
+      - id: detect-secrets
+        name: Scan for committed secrets
+        exclude: package.lock.json
+
+  # ── Build verification ─────────────────────────────────────────────────────
+  # Runs build.py after staging, ensuring the generated docs/ is always fresh
+  # and free of broken links, PII, and oversized assets before committing.
+  - repo: local
+    hooks:
+      - id: build-site
+        name: Build site and verify links/PII/sizes
+        language: python
+        entry: python build.py
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
