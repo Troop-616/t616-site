@@ -44,12 +44,6 @@ pages = [
         "body_file": "links.body.html"
     },
     {
-        "filename": "photos.html",
-        "title": "Photo Gallery",
-        "active_key": "photos_active",
-        "body_file": "photos.body.html"
-    },
-    {
         "filename": "t616-eagle-scout-stories.html",
         "title": "Eagle Scout Stories",
         "active_key": "eagle_active",
@@ -262,7 +256,7 @@ def build_site(fail_on_broken=False):
         header = header_template.replace("{{title}}", page["title"])
         
         # Set active classes
-        keys = ["index_active", "about_active", "resources_active", "links_active", "photos_active", "eagle_active"]
+        keys = ["index_active", "about_active", "resources_active", "links_active", "eagle_active"]
         for key in keys:
             if key == page["active_key"]:
                 header = header.replace(f"{{{{{key}}}}}", "active")
