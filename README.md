@@ -69,21 +69,6 @@ Then, open your web browser and go to `http://localhost:8000`. Press `Ctrl + C` 
 
 ---
 
-## 🔗 TroopWebHost Integration
-
-This site is configured to link to **TroopWebHost** for all members-only portals and contact entries.
-* **TWH Portal & Login link**: Custom button in the header nav bar and footer.
-* **TWH Contact link**: Pointed to the official TroopWebHost contact form.
-* **TWH Calendar link**: Pointed to the TWH page.
-* **Photos Portal**: Link to your troop photo archive (update the URL in `pages/photos.body.html`).
-
-If your TroopWebHost subdomain or URL changes in the future, you only need to update the links in the following files:
-* `templates/header.html` (the TroopWebHost Login button)
-* `templates/footer.html` (the TroopWebHost Portal link)
-* `pages/index.body.html` (the "Contact Us" buttons)
-
----
-
 ## 🚀 Hosting & Automated Deployment
 
 This website is hosted on **GitHub Pages** and is automatically built and deployed via **GitHub Actions** on every push to the `main` branch.
