@@ -1,0 +1,70 @@
+# .pages.yml
+#
+# Pages CMS configuration for the Troop 616 website.
+# Leaders can edit content at https://app.pagescms.org — no git required.
+#
+# Documentation: https://pagescms.org/docs/
+
+# ── Media / Image uploads ────────────────────────────────────────────────────
+# Uploaded images are stored in assets/images/ and referenced as
+# assets/images/<filename> in the generated HTML.
+media:
+  input: assets/images
+  output: assets/images
+
+# ── Editable content ─────────────────────────────────────────────────────────
+content:
+
+  # ── Upcoming Events (Homepage Cards) ──────────────────────────────────────
+  # Each entry becomes one event card on the homepage.
+  # Changes here automatically trigger a site build via GitHub Actions.
+  - name: events
+    label: "\U0001F4C5 Upcoming Events"
+    type: file
+    path: content/events.yaml
+    fields:
+      - name: events
+        label: Events
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Event Title
+            type: string
+            required: true
+            description: "Full name of the event (e.g. Anza Borrego Backpacking)"
+          - name: badge
+            label: Badge Label
+            type: string
+            description: "Short label shown on the card image (e.g. Campout, Meeting, Hike, Backpack)"
+          - name: date
+            label: Date or Date Range
+            type: string
+            description: "Display text for the date (e.g. Mar 20-22, 2026 or 1st, 2nd & 3rd Wednesdays)"
+          - name: description
+            label: Description
+            type: text
+            description: "1-2 sentence description shown on the card"
+          - name: location
+            label: Location / Time
+            type: string
+            description: "Where and when the event takes place (e.g. Lake Jennings, Lakeside (All Day))"
+          - name: image
+            label: Card Photo
+            type: image
+            description: "Photo shown on the event card — upload via the Media section"
+
+  # ── Photo Library ──────────────────────────────────────────────────────────
+  # Browse and upload photos used across the site.
+  - name: images
+    label: "\U0001F5BC\uFE0F Photo Library"
+    type: collection
+    path: assets/images
+
+# ── GitHub Actions buttons in the CMS UI ─────────────────────────────────────
+# Leaders can click this button to manually trigger a build and deploy
+# after making changes.
+actions:
+  - name: build-and-deploy
+    label: "\U0001F680 Build & Deploy Site"
+    workflow: deploy.yml

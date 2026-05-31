@@ -1,0 +1,49 @@
+# content/events.yaml
+#
+# Upcoming events displayed as cards on the homepage.
+# Edit this file via Pages CMS (app.pagescms.org) or directly.
+#
+# Fields:
+#   title       - Event name shown on the card
+#   badge       - Short label on the card image (e.g. Campout, Meeting, Hike)
+#   date        - Display string for the date (e.g. "Mar 20-22, 2026")
+#   description - 1-2 sentence description of the event
+#   location    - Where/when the event takes place (shown in the card footer)
+#   image       - Path to card photo relative to docs/ (e.g. assets/images/...)
+
+- title: Weekly Troop Meetings
+  badge: Meetings
+  date: "1st, 2nd & 3rd Wednesdays"
+  description: >-
+    Troop meetings are held in Class A Uniform September through May,
+    and Class B Uniform June through August. Log in to the TroopWebHost
+    calendar for specific details.
+  location: "Wednesdays (7:00 PM \u2013 8:00 PM)"
+  image: assets/images/c5246abc-5cb0-4c60-80cb-2d8b3ebc4539.jpg
+
+- title: Cooking Camp Out
+  badge: Campout
+  date: "Feb 20-22, 2026"
+  description: >-
+    Scouts practice back-country culinary skills, Dutch Oven cooking,
+    and meal planning to fulfill rank advancement requirements.
+  location: "Lake Jennings, Lakeside (All Day)"
+  image: assets/images/cooking_campout.jpg
+
+- title: "Troop 616\u2019s 55th Anniversary"
+  badge: Celebration
+  date: "Mar 7, 2026"
+  description: >-
+    Celebrating 55 years of adventure, leadership development, and community
+    engagement in Scripps Ranch! Open to all alumni and families.
+  location: "MCAS Miramar Officers' Club (6-9 PM)"
+  image: assets/images/52ce6224-13cb-423c-b237-b7e097838598.png
+
+- title: Anza Borrego Backpacking
+  badge: Backpack
+  date: "Mar 20-22, 2026"
+  description: >-
+    A challenging backpacking trek focusing on navigation, wilderness survival,
+    teamwork development, and desert environmental awareness.
+  location: "Anza-Borrego State Park (All Day)"
+  image: assets/images/anza_borrego_backpacking.jpg

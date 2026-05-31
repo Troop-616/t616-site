@@ -1,13 +1,21 @@
+import html
 import os
 import re
 import shutil
 import sys
 from pathlib import Path
 
+try:
+    import yaml
+except ImportError:
+    print("Error: PyYAML is required. Install it with: pip install pyyaml")
+    sys.exit(1)
+
 # Paths
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 PAGES_DIR = BASE_DIR / "pages"
+CONTENT_DIR = BASE_DIR / "content"
 OUTPUT_DIR = BASE_DIR / "docs"
 
 # Source paths
@@ -50,6 +58,64 @@ pages = [
         "body_file": "t616-eagle-scout-stories.body.html"
     }
 ]
+
+# ── Location pin SVG used inside every event card ───────────────────────────
+_PIN_SVG = (
+    '<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">'
+    '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13'
+    'c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5'
+    ' 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>'
+    '</svg>'
+)
+
+
+def load_events():
+    """Load upcoming events from content/events.yaml."""
+    events_file = CONTENT_DIR / "events.yaml"
+    if not events_file.exists():
+        print("Warning: content/events.yaml not found. No events will be rendered.")
+        return []
+    with open(events_file, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    return data if isinstance(data, list) else []
+
+
+def render_event_cards(events):
+    """Render a list of event dicts into the cards-grid HTML block."""
+    if not events:
+        return ""
+
+    cards = []
+    for event in events:
+        title = html.escape(str(event.get("title", "")))
+        badge = html.escape(str(event.get("badge", "")))
+        date = html.escape(str(event.get("date", "")))
+        description = html.escape(str(event.get("description", "")))
+        location = html.escape(str(event.get("location", "")))
+        image = html.escape(str(event.get("image", "")))
+
+        card = (
+            '        <div class="card">\n'
+            '          <div class="card-img-container">\n'
+            f'            <img src="{image}" alt="{title}" class="card-img">\n'
+            f'            <span class="card-badge">{badge}</span>\n'
+            '          </div>\n'
+            '          <div class="card-content">\n'
+            f'            <div class="card-date">{date}</div>\n'
+            f'            <h3 class="card-title">{title}</h3>\n'
+            f'            <p class="card-desc">{description}</p>\n'
+            '            <div class="card-meta">\n'
+            f'              {_PIN_SVG}\n'
+            f'              {location}\n'
+            '            </div>\n'
+            '          </div>\n'
+            '        </div>'
+        )
+        cards.append(card)
+
+    inner = "\n\n".join(cards)
+    return f'      <div class="cards-grid">\n{inner}\n      </div>'
+
 
 def copy_static_resources():
     # Ensure docs directory exists
@@ -239,6 +305,10 @@ def build_site(fail_on_broken=False):
     # Copy assets and styles first
     copy_static_resources()
 
+    # Load dynamic content from YAML data files
+    events = load_events()
+    events_html = render_event_cards(events)
+
     for page in pages:
         body_path = PAGES_DIR / page["body_file"]
 
@@ -250,6 +320,11 @@ def build_site(fail_on_broken=False):
 
         with open(body_path, 'r', encoding='utf-8') as f:
             body_content = f.read()
+
+        # Inject dynamic content at placeholders
+        body_content = body_content.replace(
+            "<!-- EVENTS_PLACEHOLDER -->", events_html
+        )
 
         # Build header with active state
         header = header_template.replace("{{title}}", page["title"])

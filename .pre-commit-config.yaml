@@ -64,3 +64,4 @@ repos:
         pass_filenames: false
         always_run: true
         stages: [pre-commit]
+        additional_dependencies: [pyyaml]
