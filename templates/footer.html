@@ -30,6 +30,13 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal for Past Adventures Gallery -->
+  <div id="lightbox-modal" class="lightbox" style="display: none;">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
+  </div>
+
   <script>
     // Toggle Mobile Navigation Menu
     const burger = document.getElementById('burger-menu');
@@ -43,6 +50,51 @@
         nav.classList.toggle('active');
         // Burger Animation
         burger.classList.toggle('toggle');
+      });
+    }
+
+    // Lightbox Modal for Photo Gallery Cards
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    if (lightbox && lightboxImg && lightboxCaption) {
+      document.querySelectorAll('.card-img-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const fullImgUrl = this.getAttribute('href');
+          const imgAlt = this.querySelector('img').getAttribute('alt');
+          
+          lightboxImg.src = fullImgUrl;
+          lightboxCaption.textContent = imgAlt;
+          lightbox.style.display = 'flex';
+          setTimeout(() => {
+            lightbox.classList.add('active');
+          }, 10);
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        setTimeout(() => {
+          lightbox.style.display = 'none';
+          lightboxImg.src = '';
+          lightboxCaption.textContent = '';
+        }, 300);
+      }
+
+      // Close when clicking close button or anywhere outside the image
+      lightbox.addEventListener('click', function(e) {
+        if (e.target !== lightboxImg && e.target !== lightboxCaption) {
+          closeLightbox();
+        }
+      });
+
+      // Close when pressing Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
       });
     }
   </script>
