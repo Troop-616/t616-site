@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allows manual trigger from GitHub UI
+  workflow_dispatch: # Allows manual trigger from GitHub UI and Pages CMS
+    inputs:
+      payload:
+        description: "Optional payload passed by Pages CMS when triggering a build"
+        required: false
+        type: string
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 # contents:write is also needed for Pages CMS to commit content changes.
