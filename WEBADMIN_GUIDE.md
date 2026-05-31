@@ -114,5 +114,6 @@ At the end of your term, you must complete this handoff checklist with the incom
 - [ ] **Clone repository**: Help the incoming Webadmin clone the repository to their computer.
 - [ ] **Run local build**: Verify they can run `python3 build.py` and start the local server `python3 -m http.server 8000 --directory docs`.
 - [ ] **Review Project Structure**: Walk through the folders (`pages/`, `templates/`, `assets/`, `docs/`) and explain the core compiler rules.
+- [ ] **Update Email Forwarder/Alias**: Log into the domain control panel (or contact the adult Webmaster) to update the destination of the `webadmin@t616.org` forwarder to point to the incoming Webadmin's personal email (and parents' emails).
 - [ ] **TroopWebHost Credentials**: Confirm they have the necessary Scout/Adult Webadmin access level on **TroopWebHost** to update the calendar integration or custom pages if needed.
 - [ ] **Submit Handoff Form**: Notify the Scoutmaster or Committee Webmaster that the handoff is complete.

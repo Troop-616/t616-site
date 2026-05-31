@@ -9,6 +9,7 @@ This checklist contains the remaining administrative setup steps required on Git
 - [ ] Select the **Free Plan**.
 - [ ] Choose an organization name (e.g. `scout-troop-616` or `troop616-sd`).
 - [ ] Add at least one other adult leader (e.g. Committee Chair or Scoutmaster) as an **Owner** for redundancy.
+- [ ] **Set up a Relay/Forwarder Email**: Create a generic forwarder (e.g. `webadmin@t616.org`) through your domain registrar or host. Configure it to forward to your email and/or the active Scout Webadmin's email. Use this address for any shared accounts to avoid tying them to personal email accounts.
 
 ---
 
