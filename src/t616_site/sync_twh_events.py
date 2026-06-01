@@ -263,7 +263,6 @@ def main() -> None:
     # Events file — Dict format with metadata: {events: [...]}
     events_data = {
         "events": upcoming,
-        "_synced_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "_source": TWH_URL,
     }
     write_yaml(EVENTS_FILE, events_data, dry_run=args.dry_run)
@@ -271,7 +270,6 @@ def main() -> None:
     # Highlights file — separate from manually curated events
     highlights_data = {
         "highlights": highlights,
-        "_synced_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "_source": TWH_URL,
     }
     write_yaml(HIGHLIGHTS_FILE, highlights_data, dry_run=args.dry_run)

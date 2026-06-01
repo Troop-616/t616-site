@@ -21,8 +21,10 @@ t616-static/ (Git Root)
 │   ├── events.yaml         # Sync'ed upcoming events
 │   └── highlights.yaml     # Sync'ed past adventure photos
 │
-├── scripts/                # Utility & Sync Scripts
-│   └── sync_twh_events.py  # Playwright sync script to scrape TroopWebHost
+├── src/                    # Python Source Files
+│   └── t616_site/          # Main project package
+│       ├── __init__.py     # Declares the package namespace
+│       └── sync_twh_events.py # Playwright sync script to scrape TroopWebHost
 │
 ├── templates/              # Shared Layout Templates
 │   ├── header.html         # Top navigation and logo (edit here to change menus)
@@ -52,6 +54,16 @@ t616-static/ (Git Root)
 
 This site uses a template compiler so that you don't have to copy-paste the header and footer navigation menus onto every single page.
 
+### Initial Setup (One-time)
+Before making edits locally, set up the project dependencies in your terminal:
+```bash
+# Option A: Using uv (Recommended)
+uv sync
+
+# Option B: Using standard Python (Fallback)
+python3 -m pip install pyyaml
+```
+
 ### Step 1: Make your changes
 * **To edit page content** (like adding a resource or updating text): Open the corresponding file in `pages/` (e.g., `pages/resources.body.html`).
 * **To change the logo or the navigation menu**: Edit `templates/header.html`.
@@ -62,6 +74,10 @@ This site uses a template compiler so that you don't have to copy-paste the head
 ### Step 2: Compile the pages (locally for testing)
 After saving your changes, open your terminal, navigate to this folder, and run:
 ```bash
+# Recommended (using uv):
+uv run build.py
+
+# Fallback (standard Python):
 python3 build.py
 ```
 This will merge your body content with templates and save them inside the `docs/` folder, and check for any broken local links. *Note: You never need to edit files in `docs/` directly.*
@@ -82,23 +98,34 @@ The homepage displays two sections dynamically loaded from the troop's official 
 2. **Highlights from Past Adventures** (derived from recent past events containing photo gallery uploads)
 
 ### How it works:
-* A background sync script (**`scripts/sync_twh_events.py`**) launches a headless browser (via Playwright) to navigate the troop's public page, scrape events and high-resolution photo gallery details, and write them to the data files in `content/`.
+* A background sync script (**`src/t616_site/sync_twh_events.py`**) launches a headless browser (via Playwright) to navigate the troop's public page, scrape events and high-resolution photo gallery details, and write them to the data files in `content/`.
 * A **GitHub Actions Workflow** (`sync_events.yml`) runs this scraper automatically **every day at 6:00 AM UTC**.
 * If any new events or photos are detected, it commits them directly to the repository and triggers a rebuild/deploy workflow automatically.
 
 ### Running a Manual Sync:
 If you need to force an immediate sync of events/photos, you can run the sync script manually from your local command line:
-1. Ensure Playwright and BeautifulSoup4 are installed:
+
+#### Option A: Using uv (Recommended)
+1. Initialize the virtual environment and fetch chromium browser:
    ```bash
-   pip3 install playwright beautifulsoup4 pyyaml
+   uv sync
+   uv run playwright install chromium
+   ```
+2. Run the sync and rebuild:
+   ```bash
+   uv run sync-twh-events
+   uv run build.py
+   ```
+
+#### Option B: Using standard Python (Fallback)
+1. Install dependencies for your interpreter:
+   ```bash
+   python3 -m pip install playwright beautifulsoup4 pyyaml
    python3 -m playwright install chromium
    ```
-2. Run the sync:
+2. Run the sync and rebuild:
    ```bash
-   python3 scripts/sync_twh_events.py
-   ```
-3. Rebuild the site:
-   ```bash
+   python3 src/t616_site/sync_twh_events.py
    python3 build.py
    ```
 

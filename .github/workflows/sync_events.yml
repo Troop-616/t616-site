@@ -17,18 +17,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.x"
+          version: "latest"
+          enable-cache: true
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
-          pip install pyyaml beautifulsoup4 playwright
-          python3 -m playwright install chromium --with-deps
+          uv sync
+          uv run playwright install chromium --with-deps
 
       - name: Sync Events from TroopWebHost
-        run: python3 scripts/sync_twh_events.py
+        run: uv run sync-twh-events
 
       - name: Check for Changes
         id: diff

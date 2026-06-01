@@ -17,3 +17,9 @@ __pycache__/
 
 # Compiled site folder
 docs/
+.venv/
+
+# Python packaging/build directories
+*.egg-info/
+build/
+dist/
