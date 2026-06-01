@@ -16,7 +16,7 @@ This project is a static site structured with a custom Python compiler. Follow t
    * Page body content is inside `pages/*.body.html`.
    * The shared header is inside `templates/header.html`.
    * The shared footer is inside `templates/footer.html`.
-4. **Always prompt the user to run `python3 build.py`** after making changes so their final HTML output compiles.
+4. **Always prompt the user to run uv run build.py** (or `python3 build.py`) after making changes so their final HTML output compiles.
 
 ---
 
@@ -45,7 +45,7 @@ This project is a static site structured with a custom Python compiler. Follow t
    * Badge text (`Meeting`, `Campout`, `Hike`, etc.)
    * Event Title, Date, and Description
    * Location metadata block at the bottom of the card.
-4. Run `python3 build.py`.
+4. Run `uv run build.py` (or `python3 build.py`).
 
 ### To Add a Downloadable Document
 1. Save the document (PDF, DOC) in the root `assets/downloads/` with a clean lowercase snake_case filename.
@@ -61,7 +61,7 @@ This project is a static site structured with a custom Python compiler. Follow t
      <a href="assets/downloads/your_document_file.pdf" target="_blank" class="resource-btn" aria-label="Download PDF">⬇</a>
    </div>
    ```
-5. Run `python3 build.py`.
+5. Run `uv run build.py` (or `python3 build.py`).
 
 ### To Add a New Page to the Site
 1. Create a body file inside `pages/`, named `pages/your-page.body.html`.
@@ -76,4 +76,15 @@ This project is a static site structured with a custom Python compiler. Follow t
 4. Open `build.py` and:
    * Add a page dictionary in the `pages = [...]` list.
    * Add your active page key (e.g. `your_page_active`) to the `keys = [...]` list inside the `build_site()` function.
-5. Run `python3 build.py` to generate the new page inside `/docs`.
+5. Run `uv run build.py` (or `python3 build.py`) to generate the new page inside `/docs`.
+
+---
+
+## 🐍 Python Environment & Dependency Management
+
+This project uses **astral-sh/uv** to manage packaging and dependencies.
+* **requires-python**: `>=3.12`
+* **Common Commands**:
+  * Build the site: `uv run build.py` (or fallback to `python3 build.py`)
+  * Sync events & photos from TroopWebHost: `uv run sync-twh-events`
+  * Local setup: `uv sync` followed by `uv run playwright install chromium`
