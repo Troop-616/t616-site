@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write # Needed to commit updated YAML files
+  actions: write  # Needed to trigger the deploy workflow
 
 jobs:
   sync:
