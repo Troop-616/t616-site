@@ -41,7 +41,7 @@ except ImportError:
 
 TWH_URL = "https://www.TroopWebHost.org/Index.aspx?Application_ID=3588"
 TWH_BASE = "https://www.troopwebhost.org"
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 CONTENT_DIR = REPO_ROOT / "content"
 EVENTS_FILE = CONTENT_DIR / "events.yaml"
 HIGHLIGHTS_FILE = CONTENT_DIR / "highlights.yaml"
@@ -85,7 +85,7 @@ def fetch_page_html() -> str:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
-        page.goto(TWH_URL, wait_until="networkidle", timeout=30000)
+        page.goto(TWH_URL, wait_until="load", timeout=30000)
         # Wait for any AJAX content to settle
         page.wait_for_timeout(8000)
         print(f"  Landed on: {page.url}")

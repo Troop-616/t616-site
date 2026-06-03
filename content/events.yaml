@@ -1,25 +1,17 @@
 events:
-- title: Life to Eagle Workshop
-  badge: Eagle
-  date: May 31 2026 7:00PM
-  description: Join us for Life to Eagle Workshop. Log in to TroopWebHost for full
-    details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: The City of San Diego Filipino American Employees’ Association
-  badge: Event
-  date: Jun 2 2026 11:00AM
-  description: Join us for The City of San Diego Filipino American Employees’ Association.
-    Log in to TroopWebHost for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Court of Honor
   badge: CoH
   date: Jun 3 2026 6:30PM
   description: Join us for Court of Honor. Log in to TroopWebHost for full details
     and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Peter Pampo Mural Eagle Service Project
+  badge: Eagle
+  date: Jun 4 2026 2:00PM
+  description: Join us for Peter Pampo Mural Eagle Service Project. Log in to TroopWebHost
+    for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
@@ -44,6 +36,14 @@ events:
   date: Jun 21 2026 11:00AM
   description: 'Join us for SDIC: NYLT - National Youth Leadership Training. Log in
     to TroopWebHost for full details and sign-up.'
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Philmont Trek 2026 - Crew 2
+  badge: Event
+  date: Jun 26, 2026
+  description: Join us for Philmont Trek 2026 - Crew 2. Log in to TroopWebHost for
+    full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588

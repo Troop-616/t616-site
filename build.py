@@ -120,7 +120,7 @@ def render_highlight_cards(highlights):
         # Link image to full-size photo and use the high-res image as the src
         img_src = image_full if image_full else image
         img_html = f'<a href="{image_full}" target="_blank" class="card-img-link"><img src="{img_src}" alt="{title}" class="card-img"></a>' if image_full else f'<img src="{image}" alt="{title}" class="card-img">'
-        
+
         # Link title to TroopWebHost event detail page
         title_html = f'<a href="{source_url}" target="_blank" class="card-title-link">{title}</a>' if source_url else title
 
