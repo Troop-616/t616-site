@@ -1,24 +1,8 @@
 events:
-- title: Court of Honor
-  badge: CoH
-  date: Jun 3 2026 6:30PM
-  description: Join us for Court of Honor. Log in to TroopWebHost for full details
-    and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Peter Pampo Mural Eagle Service Project - June 4
   badge: Eagle
   date: Jun 4 2026 2:00PM
   description: Join us for Peter Pampo Mural Eagle Service Project - June 4. Log in
-    to TroopWebHost for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Peter Pampo Mural Eagle Scout Project - June 5
-  badge: Eagle
-  date: Jun 5 2026 2:00PM
-  description: Join us for Peter Pampo Mural Eagle Scout Project - June 5. Log in
     to TroopWebHost for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
@@ -43,6 +27,22 @@ events:
   badge: Campout
   date: Jun 21, 2026
   description: Join us for Summer Camp - Camp Tahquitz. Log in to TroopWebHost for
+    full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: 'SDIC: NYLT - National Youth Leadership Training'
+  badge: Event
+  date: Jun 21 2026 11:00AM
+  description: 'Join us for SDIC: NYLT - National Youth Leadership Training. Log in
+    to TroopWebHost for full details and sign-up.'
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Philmont Trek 2026 - Crew 2
+  badge: Event
+  date: Jun 26, 2026
+  description: Join us for Philmont Trek 2026 - Crew 2. Log in to TroopWebHost for
     full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
