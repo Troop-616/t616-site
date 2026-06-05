@@ -1,12 +1,4 @@
 events:
-- title: Peter Pampo Mural Eagle Service Project - June 4
-  badge: Eagle
-  date: Jun 4 2026 2:00PM
-  description: Join us for Peter Pampo Mural Eagle Service Project - June 4. Log in
-    to TroopWebHost for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Peter Pampo Mural Eagle Scout Service Project - June 8
   badge: Eagle
   date: Jun 8 2026 2:00PM
@@ -44,6 +36,14 @@ events:
   date: Jun 26, 2026
   description: Join us for Philmont Trek 2026 - Crew 2. Log in to TroopWebHost for
     full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Donut Ministry
+  badge: Event
+  date: Aug 30 2026 8:00AM
+  description: Join us for Donut Ministry. Log in to TroopWebHost for full details
+    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
