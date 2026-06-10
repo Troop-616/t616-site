@@ -7,6 +7,14 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Peter Pampo Mural Eagle Service Project - June10th
+  badge: Eagle
+  date: Jun 10 2026 2:00PM
+  description: Join us for Peter Pampo Mural Eagle Service Project - June10th. Log
+    in to TroopWebHost for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Summer Camp - Camp Tahquitz
   badge: Campout
   date: Jun 21, 2026
@@ -35,14 +43,6 @@ events:
   badge: Event
   date: Aug 30 2026 8:00AM
   description: Join us for Donut Ministry. Log in to TroopWebHost for full details
-    and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Webelos Woods
-  badge: Event
-  date: Sep 18, 2026
-  description: Join us for Webelos Woods. Log in to TroopWebHost for full details
     and sign-up.
   location: See TroopWebHost for location details
   image: ''
