@@ -31,18 +31,18 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Twilight Cub Camp - Volunteers needed
+  badge: Campout
+  date: Jul 6 2026 4:00PM
+  description: Join us for Twilight Cub Camp - Volunteers needed. Log in to TroopWebHost
+    for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Donut Ministry
   badge: Event
   date: Aug 30 2026 8:00AM
   description: Join us for Donut Ministry. Log in to TroopWebHost for full details
-    and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Webelos Woods
-  badge: Event
-  date: Sep 18, 2026
-  description: Join us for Webelos Woods. Log in to TroopWebHost for full details
     and sign-up.
   location: See TroopWebHost for location details
   image: ''
