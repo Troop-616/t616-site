@@ -135,4 +135,6 @@ If you need to force an immediate sync of events/photos, you can run the sync sc
 
 This website is hosted on **GitHub Pages** and is automatically built and deployed via **GitHub Actions** on every push to the `main` branch.
 
+**Live site:** https://troop-616.github.io/t616-site/
+
 For a detailed walkthrough on setting up local environments, using AI assistants, and completing the 6-month Webadmin role transition, see the [Scout Webadmin Handoff & Reference Guide](WEBADMIN_GUIDE.md).
