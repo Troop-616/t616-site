@@ -119,10 +119,10 @@ def render_highlight_cards(highlights):
 
         # Link image to full-size photo and use the high-res image as the src
         img_src = image_full if image_full else image
-        img_html = f'<a href="{image_full}" target="_blank" class="card-img-link"><img src="{img_src}" alt="{title}" class="card-img"></a>' if image_full else f'<img src="{image}" alt="{title}" class="card-img">'
+        img_html = f'<a href="{image_full}" target="_blank" rel="noopener noreferrer" class="card-img-link"><img src="{img_src}" alt="{title}" class="card-img"></a>' if image_full else f'<img src="{image}" alt="{title}" class="card-img">'
 
         # Link title to TroopWebHost event detail page
-        title_html = f'<a href="{source_url}" target="_blank" class="card-title-link">{title}</a>' if source_url else title
+        title_html = f'<a href="{source_url}" target="_blank" rel="noopener noreferrer" class="card-title-link">{title}</a>' if source_url else title
 
         card = (
             '        <div class="card">\n'
@@ -364,6 +364,38 @@ def check_file_sizes(fail_on_broken=False):
     else:
         print("✅ Size check success: all assets are within size limits.")
 
+def check_security_attributes(fail_on_broken=False):
+    """
+    Scans compiled HTML files for <a> tags with target="_blank" that are
+    missing rel="noopener noreferrer", which can expose users to tab-napping attacks.
+    """
+    issues = 0
+    tag_pattern = re.compile(r'<a\s[^>]*>', re.IGNORECASE)
+
+    print("\n--- Checking Security Attributes on Links ---")
+    for page in pages:
+        filepath = OUTPUT_DIR / page["filename"]
+        if not filepath.exists():
+            continue
+
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        for match in tag_pattern.finditer(content):
+            tag = match.group(0)
+            if 'target="_blank"' in tag and 'noopener' not in tag:
+                print(f"  ❌ MISSING rel=\"noopener noreferrer\" in docs/{page['filename']}: {tag[:120]}")
+                issues += 1
+
+    if issues > 0:
+        print(f"⚠️  Security check finished: found {issues} links missing rel=\"noopener noreferrer\".")
+        if fail_on_broken:
+            print("❌ Exiting with error because --fail-on-broken was set.")
+            sys.exit(1)
+    else:
+        print("✅ Security check success: all target=\"_blank\" links have rel=\"noopener noreferrer\".")
+
+
 def build_site(fail_on_broken=False):
     header_path = TEMPLATES_DIR / "header.html"
     footer_path = TEMPLATES_DIR / "footer.html"
@@ -431,6 +463,7 @@ def build_site(fail_on_broken=False):
     verify_links(fail_on_broken=fail_on_broken)
     scan_for_pii(fail_on_broken=fail_on_broken)
     check_file_sizes(fail_on_broken=fail_on_broken)
+    check_security_attributes(fail_on_broken=fail_on_broken)
 
 if __name__ == "__main__":
     fail_on_broken = "--fail-on-broken" in sys.argv
