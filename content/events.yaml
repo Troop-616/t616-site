@@ -31,18 +31,18 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: End of Summer Pool Party
+  badge: Event
+  date: Aug 5 2026 6:30PM
+  description: Join us for End of Summer Pool Party. Log in to TroopWebHost for full
+    details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Donut Ministry
   badge: Event
   date: Aug 30 2026 8:00AM
   description: Join us for Donut Ministry. Log in to TroopWebHost for full details
-    and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Webelos Woods
-  badge: Event
-  date: Sep 18, 2026
-  description: Join us for Webelos Woods. Log in to TroopWebHost for full details
     and sign-up.
   location: See TroopWebHost for location details
   image: ''
