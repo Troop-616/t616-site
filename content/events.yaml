@@ -7,27 +7,11 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: 'SDIC: NYLT - National Youth Leadership Training'
-  badge: Event
-  date: Jun 21 2026 11:00AM
-  description: 'Join us for SDIC: NYLT - National Youth Leadership Training. Log in
-    to TroopWebHost for full details and sign-up.'
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Philmont Trek 2026 - Crew 2
   badge: Event
   date: Jun 26, 2026
   description: Join us for Philmont Trek 2026 - Crew 2. Log in to TroopWebHost for
     full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Peter Pampo Eagle Scout Service Project Mural - June 26
-  badge: Eagle
-  date: Jun 26 2026 1:00PM
-  description: Join us for Peter Pampo Eagle Scout Service Project Mural - June 26.
-    Log in to TroopWebHost for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
@@ -44,6 +28,22 @@ events:
   date: Jul 6 2026 4:00PM
   description: Join us for Twilight Cub Camp - Volunteers needed. Log in to TroopWebHost
     for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: End of Summer Pool Party
+  badge: Event
+  date: Aug 5 2026 6:30PM
+  description: Join us for End of Summer Pool Party. Log in to TroopWebHost for full
+    details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Donut Ministry
+  badge: Event
+  date: Aug 30 2026 8:00AM
+  description: Join us for Donut Ministry. Log in to TroopWebHost for full details
+    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
