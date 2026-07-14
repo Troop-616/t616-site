@@ -7,6 +7,14 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: UNIVERSITY OF SCOUTING!
+  badge: Event
+  date: Aug 08, 2026
+  description: Join us for UNIVERSITY OF SCOUTING!. Log in to TroopWebHost for full
+    details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Donut Ministry
   badge: Event
   date: Aug 30 2026 8:00AM
@@ -36,14 +44,6 @@ events:
   date: Nov 13, 2026
   description: Join us for Mission Bay Canoe Training - Campout. Log in to TroopWebHost
     for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Death Valley
-  badge: Event
-  date: Jan 16, 2027
-  description: Join us for Death Valley. Log in to TroopWebHost for full details and
-    sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
