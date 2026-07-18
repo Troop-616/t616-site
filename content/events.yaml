@@ -1,12 +1,4 @@
 events:
-- title: Aisha Riehl Eagle Service Project Workshop
-  badge: Eagle
-  date: Jul 17 2026 1:00PM
-  description: Join us for Aisha Riehl Eagle Service Project Workshop. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Collin Gutche Eagle Service Project Workshop
   badge: Eagle
   date: Jul 18 2026 10:00AM
@@ -43,6 +35,14 @@ events:
   badge: Event
   date: Sep 18, 2026
   description: Join us for Webelos Woods. Log in to TroopWebHost for full details
+    and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Backpack Training
+  badge: Backpack
+  date: Oct 09, 2026
+  description: Join us for Backpack Training. Log in to TroopWebHost for full details
     and sign-up.
   location: See TroopWebHost for location details
   image: ''
