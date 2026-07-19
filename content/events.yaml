@@ -1,12 +1,4 @@
 events:
-- title: Collin Gutche Eagle Service Project Workshop
-  badge: Eagle
-  date: Jul 18 2026 10:00AM
-  description: Join us for Collin Gutche Eagle Service Project Workshop. Log in to
-    TroopWebHost for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: End of Summer Pool Party
   badge: Event
   date: Aug 5 2026 6:30PM
@@ -44,6 +36,14 @@ events:
   date: Oct 09, 2026
   description: Join us for Backpack Training. Log in to TroopWebHost for full details
     and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Mission Bay Canoe Training - Campout
+  badge: Campout
+  date: Nov 13, 2026
+  description: Join us for Mission Bay Canoe Training - Campout. Log in to TroopWebHost
+    for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
