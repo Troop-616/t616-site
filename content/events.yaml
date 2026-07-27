@@ -1,12 +1,4 @@
 events:
-- title: Ashia Riehl Eagle Service Project Workshop
-  badge: Eagle
-  date: Jul 26 2026 9:00AM
-  description: Join us for Ashia Riehl Eagle Service Project Workshop. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: End of Summer Pool Party
   badge: Event
   date: Aug 5 2026 6:30PM
@@ -44,6 +36,14 @@ events:
   date: Sep 12 2026 8:00AM
   description: Join us for Troop 959 Merit Badge Day. Log in to TroopWebHost for full
     details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Maritime Museum of San Diego
+  badge: Event
+  date: Sep 26 2026 3:00PM
+  description: Join us for Maritime Museum of San Diego. Log in to TroopWebHost for
+    full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
