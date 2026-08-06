@@ -1,12 +1,4 @@
 events:
-- title: End of Summer Pool Party
-  badge: Event
-  date: Aug 5 2026 6:30PM
-  description: Join us for End of Summer Pool Party. Log in to TroopWebHost for full
-    details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: UNIVERSITY OF SCOUTING!
   badge: Event
   date: Aug 08, 2026
@@ -44,6 +36,14 @@ events:
   date: Sep 26 2026 3:00PM
   description: Join us for Maritime Museum of San Diego. Log in to TroopWebHost for
     full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Backpack Training / Trail Building
+  badge: Backpack
+  date: Nov 13, 2026
+  description: Join us for Backpack Training / Trail Building. Log in to TroopWebHost
+    for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
