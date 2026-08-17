@@ -23,6 +23,14 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: JD's Eagle Scout Court of Honor
+  badge: Eagle
+  date: Sep 16 2026 7:00PM
+  description: Join us for JD's Eagle Scout Court of Honor. Log in to TroopWebHost
+    for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Maritime Museum of San Diego
   badge: Event
   date: Sep 26 2026 3:00PM
@@ -36,14 +44,6 @@ events:
   date: Nov 13, 2026
   description: Join us for Backpack Training / Trail Building. Log in to TroopWebHost
     for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Ladle Fellowship
-  badge: Event
-  date: Nov 15 2026 1:00PM
-  description: Join us for Ladle Fellowship. Log in to TroopWebHost for full details
-    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
