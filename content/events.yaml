@@ -23,6 +23,14 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Original Kayak Cave Tour - La Jolla Kayak (Placeholder)
+  badge: Kayak
+  date: Placeholder
+  description: Join us for Original Kayak Cave Tour - La Jolla Kayak (Placeholder).
+    Log in to TroopWebHost for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Beach Campout - South Carlsbad
   badge: Campout
   date: Oct 23, 2026
@@ -36,14 +44,6 @@ events:
   date: Nov 13, 2026
   description: Join us for Backpack Training / Trail Building. Log in to TroopWebHost
     for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Ladle Fellowship
-  badge: Event
-  date: Nov 15 2026 1:00PM
-  description: Join us for Ladle Fellowship. Log in to TroopWebHost for full details
-    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
