@@ -1,16 +1,8 @@
 events:
-- title: Troop 959 Merit Badge Day
-  badge: Merit Badge
-  date: Sep 12 2026 8:00AM
-  description: Join us for Troop 959 Merit Badge Day. Log in to TroopWebHost for full
-    details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: September Hike - Lake Calavera
+- title: CANCELLED - September Hike - Lake Calavera
   badge: Hike
   date: Sep 13 2026 8:00AM
-  description: Join us for September Hike - Lake Calavera. Log in to TroopWebHost
+  description: Join us for CANCELLED - September Hike - Lake Calavera. Log in to TroopWebHost
     for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
@@ -43,6 +35,14 @@ events:
   badge: Campout
   date: Oct 23, 2026
   description: Join us for Beach Campout - South Carlsbad. Log in to TroopWebHost
+    for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Backpack Training / Trail Building
+  badge: Backpack
+  date: Nov 13, 2026
+  description: Join us for Backpack Training / Trail Building. Log in to TroopWebHost
     for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
