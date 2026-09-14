@@ -1,12 +1,4 @@
 events:
-- title: CANCELLED - September Hike - Lake Calavera
-  badge: Hike
-  date: Sep 13 2026 8:00AM
-  description: Join us for CANCELLED - September Hike - Lake Calavera. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: JD's Eagle Scout Court of Honor
   badge: Eagle
   date: Sep 16 2026 7:00PM
@@ -20,6 +12,14 @@ events:
   date: Placeholder
   description: Join us for Original Kayak Cave Tour - La Jolla Kayak (Placeholder).
     Log in to TroopWebHost for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Court of Honor
+  badge: CoH
+  date: Oct 7 2026 6:30PM
+  description: Join us for Court of Honor. Log in to TroopWebHost for full details
+    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
