@@ -1,12 +1,4 @@
 events:
-- title: JD's Eagle Scout Court of Honor
-  badge: Eagle
-  date: Sep 16 2026 7:00PM
-  description: Join us for JD's Eagle Scout Court of Honor. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Original Kayak Cave Tour - La Jolla Kayak
   badge: Kayak
   date: Sep 26 2026 8:30AM
@@ -43,6 +35,14 @@ events:
   badge: Campout
   date: Oct 23, 2026
   description: Join us for Beach Campout - South Carlsbad. Log in to TroopWebHost
+    for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Troop Hike - November (Placeholder)
+  badge: Hike
+  date: Placeholder
+  description: Join us for Troop Hike - November (Placeholder). Log in to TroopWebHost
     for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
