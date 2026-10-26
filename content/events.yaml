@@ -1,12 +1,4 @@
 events:
-- title: Beach Campout - South Carlsbad
-  badge: Campout
-  date: Oct 23, 2026
-  description: Join us for Beach Campout - South Carlsbad. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Troop Hike - November (Placeholder)
   badge: Hike
   date: Placeholder
@@ -44,6 +36,14 @@ events:
   date: Placeholder
   description: Join us for Troop Hike - December (Placeholder). Log in to TroopWebHost
     for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Broom-ball (Placeholder)
+  badge: Event
+  date: Placeholder
+  description: Join us for Broom-ball (Placeholder). Log in to TroopWebHost for full
+    details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
