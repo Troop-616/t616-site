@@ -1,12 +1,4 @@
 events:
-- title: Troop Hike - November (Placeholder)
-  badge: Hike
-  date: Placeholder
-  description: Join us for Troop Hike - November (Placeholder). Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Backpack Training / Trail Building
   badge: Backpack
   date: Nov 13, 2026
@@ -31,6 +23,14 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Troop Meeting (EBS)
+  badge: Meeting
+  date: EBS
+  description: Join us for Troop Meeting (EBS). Log in to TroopWebHost for full details
+    and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Troop Hike - December (Placeholder)
   badge: Hike
   date: Placeholder
@@ -39,11 +39,11 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Webelos Night (lPlaceholder)
+- title: Webelos Night
   badge: Event
-  date: lPlaceholder
-  description: Join us for Webelos Night (lPlaceholder). Log in to TroopWebHost for
-    full details and sign-up.
+  date: Dec 9 2026 7:00PM
+  description: Join us for Webelos Night. Log in to TroopWebHost for full details
+    and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
