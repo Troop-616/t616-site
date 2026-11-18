@@ -1,12 +1,4 @@
 events:
-- title: webelos woods
-  badge: Event
-  date: Nov 18 2026 8:00AM
-  description: Join us for webelos woods. Log in to TroopWebHost for full details
-    and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Minecraft Server Build & Test Night
   badge: Event
   date: Nov 20 2026 6:30PM
@@ -23,14 +15,6 @@ events:
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
-- title: Minecraft Night with AOL Scouts
-  badge: Event
-  date: Dec 4 2026 6:30PM
-  description: Join us for Minecraft Night with AOL Scouts. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Troop Hike - December (Placeholder)
   badge: Hike
   date: Placeholder
@@ -44,6 +28,22 @@ events:
   date: Dec 9 2026 7:00PM
   description: Join us for Webelos Night. Log in to TroopWebHost for full details
     and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Minecraft Night with AOL Scouts
+  badge: Event
+  date: Dec 11 2026 6:30PM
+  description: Join us for Minecraft Night with AOL Scouts. Log in to TroopWebHost
+    for full details and sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: Broom-ball
+  badge: Event
+  date: Dec 18 2026 11:00PM
+  description: Join us for Broom-ball. Log in to TroopWebHost for full details and
+    sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
