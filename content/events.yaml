@@ -1,12 +1,4 @@
 events:
-- title: Minecraft Server Build & Test Night
-  badge: Event
-  date: Nov 20 2026 6:30PM
-  description: Join us for Minecraft Server Build & Test Night. Log in to TroopWebHost
-    for full details and sign-up.
-  location: See TroopWebHost for location details
-  image: ''
-  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
 - title: Troop Meeting (EBS)
   badge: Meeting
   date: EBS
@@ -44,6 +36,14 @@ events:
   date: Dec 18 2026 11:00PM
   description: Join us for Broom-ball. Log in to TroopWebHost for full details and
     sign-up.
+  location: See TroopWebHost for location details
+  image: ''
+  source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
+- title: National Youth Leadership Training (NYLT) - Winter Session
+  badge: Event
+  date: NYLT
+  description: Join us for National Youth Leadership Training (NYLT) - Winter Session.
+    Log in to TroopWebHost for full details and sign-up.
   location: See TroopWebHost for location details
   image: ''
   source_url: https://www.TroopWebHost.org/Index.aspx?Application_ID=3588
